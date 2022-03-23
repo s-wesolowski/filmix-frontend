@@ -4,13 +4,6 @@ Client do aplikacji internetowej filmx.
 
 Filmix to aplikacja do wyszukiwania i kolekcjonowania filmów i seriali. 
 
-# Wymagania aplikacji
-- Node.js v16.13.2
-- npm v8.3.2
-
-# Uruchomienie aplikacji
-- npm start
-
 # Biblioteki wykorzystane w projekcie
 - ReactJS
 - Redux
