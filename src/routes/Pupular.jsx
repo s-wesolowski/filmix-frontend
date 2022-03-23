@@ -16,7 +16,7 @@ const Popular = () => {
                 setMovies(tmdb_movies.results)
         }
         fetchMovies()
-    },[])
+    },[apiKey, movies])
 
     return (
         <div className="popular">
