@@ -8,6 +8,8 @@
     overflow: hidden;
     cursor: pointer;
     font-family: 'Happy Monkey', cursive;
+    font-weight: bolder;
+    letter-spacing: 1.3px;
 
     &.small {
         width: 100px;
@@ -60,14 +62,21 @@
             width: 100%;
             text-align: center;
             padding: 5px 20px;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: ease-in-out 0.35s;
         }
         opacity: 0;
-        transition: ease-out 0.25s;
+        transition: ease-in-out 0.25s;
     }
 
     &:hover {
         .title {
             opacity: 1;
+            p {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     }
 }

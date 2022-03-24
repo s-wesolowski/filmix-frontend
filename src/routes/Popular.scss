@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
 .popular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     h2 {
-        font-family: 'Happy Monkey', cursive;
+        font-family: 'Happy Monkey';
+        font-weight: bold;
         font-size: 40px;
         margin-left: 10px;
+        text-align: center;
+        width: 100%;
     }
 }

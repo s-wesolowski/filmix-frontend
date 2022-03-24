@@ -2,8 +2,6 @@ import "./Poster.scss"
 
 const Poster = (props) => {
 
-    console.log(props.media)
-
     const { mediaType = "movie", size = "medium", margin = "5px" } = props;
 
     const posterID =  props?.media?.poster_path;

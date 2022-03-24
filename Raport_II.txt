@@ -1,0 +1,30 @@
+Szymon Wesołowski
+
+Raport II
+
+Zrobione:
+- Stworzony klient aplikacji
+- Zakładka "popularne" wyświetlająca popularne filmy z TMDB Api
+
+Do zrobienia:
+- Backend
+- Strona główna klienta
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Archiwum aktualizacji
+
+#Update 22.03.2022
+
++ Zainicjowanie blibliotek Django i React
++ Szkielet strony w React
+
+#Update 23.03.2022
+
++ Zakładka popularne fetchująca filmy z TMDB Api
++ Zewnętrzny komponent "Poster" zawierający odnośnik do filmu w formie plakatu
+
+#Update 24.03.2022
+
++ Interakcja z plakatem (animacja wyświetlająca tytuł)
++ Stworzenie routów z React Router V6
