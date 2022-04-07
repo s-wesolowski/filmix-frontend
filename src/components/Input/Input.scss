@@ -12,7 +12,7 @@
 }
 
 .Input-text {
-    input:placeholder-shown + span {
+    input:active + span {
         display: inline;  
     }
 
