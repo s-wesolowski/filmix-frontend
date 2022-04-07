@@ -1,7 +1,7 @@
 import './App.scss';
 import NavBar from "./Layouts/Navbar";
 import { Routes, Route } from "react-router-dom"
-import Home from "./Routes/Home.jsx"
+import Home from "./Routes/Home"
 import Popular from './Routes/Pupular';
 
 function App() {
