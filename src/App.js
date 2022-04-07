@@ -1,8 +1,8 @@
 import './App.scss';
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./Layouts/Navbar";
 import { Routes, Route } from "react-router-dom"
-import Home from "./routes/Home"
-import Popular from './routes/Pupular';
+import Home from "./Routes/Home"
+import Popular from './Routes/Pupular';
 
 function App() {
   return (

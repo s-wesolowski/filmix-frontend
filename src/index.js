@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import '@csstools/normalize.css'
 import './index.scss';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Poster from "../components/Poster/Poster";
+import Poster from "../components/Poster";
 import "./Popular.scss"
 import axios from "axios";
 
@@ -10,19 +10,19 @@ const Popular = () => {
 
 
 
-        useEffect(()=>{
-            const fetchMovies = async () => {
-                const tmdb_response = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey)
-                const tmdb_movies = await tmdb_response.data
-    
-                console.log(tmdb_response)
-                
-                if (movies)
-                    setMovies(tmdb_movies.results)
-            }
+    useEffect(()=>{
+        const fetchMovies = async () => {
+            const tmdb_response = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey)
+            const tmdb_movies = await tmdb_response.data
 
-            fetchMovies()
-        },[apiKey, movies])
+            console.log(tmdb_response)
+            
+            if (tmdb_movies)
+                setMovies(tmdb_movies.results)
+        }
+
+        fetchMovies()
+    },[apiKey])
 
 
     return (

@@ -16,15 +16,32 @@ Archiwum aktualizacji
 
 #Update 22.03.2022
 
-+ Zainicjowanie blibliotek Django i React
++ Intalacja wymaganych bibliotek
++ Stworzenie pierwszych plików za pomocą Create React App
 + Szkielet strony w React
++ Podział plików na foldery routes i components
 
 #Update 23.03.2022
 
 + Zakładka popularne fetchująca filmy z TMDB Api
 + Zewnętrzny komponent "Poster" zawierający odnośnik do filmu w formie plakatu
++ Dodanie styli do klienta w SCSS
 
 #Update 24.03.2022
 
 + Interakcja z plakatem (animacja wyświetlająca tytuł)
 + Stworzenie routów z React Router V6
++ Boczna nawigacja między routami
+
+#Update 28.03.2022
+
++ Aktualizacja pliku readme o zmienne środowiskowe
++ Reorganizacja struktury folderów
++ Stworzenie komponentu Modal
++ Dodanie okna logowania
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Problemy
+
+- Kompatybilność React Router V6 z innymi bibliotekami (np. z React Transition Group)
+- Animacja między routami

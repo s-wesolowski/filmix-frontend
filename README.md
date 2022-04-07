@@ -11,6 +11,9 @@ Filmix to aplikacja do wyszukiwania i kolekcjonowania filmów i seriali.
 # Uruchomienie aplikacji
 - npm start
 
+# Wymagane zmienne środowiskowe
+- REACT_APP_TMDB_API_KEY = Klucz API (V3 auth) od TMDB
+
 # Biblioteki wykorzystane w projekcie
 - ReactJS
 - React Router v6

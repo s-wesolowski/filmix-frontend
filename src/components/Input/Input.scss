@@ -1,0 +1,27 @@
+.Input {
+    background-color: rgb(60,60,60);
+    border-radius: 5px;
+    padding: 10px;
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: rgb(220, 220, 220);
+    }
+}
+
+.Input-text {
+    input:placeholder-shown + span {
+        display: inline;  
+    }
+
+    input:placeholder {
+        color: transparent;
+    }
+
+    span {
+        color: rgb(140, 140, 140);
+        display: none;
+    }
+}
