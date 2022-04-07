@@ -5,10 +5,12 @@ import Input from "../../../components/Input"
 
 const Login = (props) => {
 
-    const [userCredentials, setUserCredentials] = useState({email: "", password: ""})
+    const [userCredentials, setUserCredentials] = useState({
+        email: "", password: "", remember_me: false
+    })
 
-    const handleInputChange = value => {
-        setUserCredentials({...userCredentials, [value.target.name]: value.target.value})
+    const handleInputChange = (name, value) => {
+        setUserCredentials({...userCredentials, [name]: value})
         console.log(userCredentials)
     }
 
@@ -17,6 +19,7 @@ const Login = (props) => {
         <div className="login">
             <Input type="text" placeholder="E-mail address" name="email" onChange={handleInputChange}/>
             <Input type="text" placeholder="Password" name="password" onChange={handleInputChange}/>
+            <Input type="checkbox" placeholder="Remember me" name="remember_me" onChange={handleInputChange}/>
         </div>
     </Modal>
 }

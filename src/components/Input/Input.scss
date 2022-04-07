@@ -1,7 +1,9 @@
 .Input {
     background-color: rgb(60,60,60);
     border-radius: 5px;
-    padding: 10px;
+    position: relative;
+    height: 60px;
+    margin: 5px;
 
     input {
         border: none;
@@ -12,16 +14,29 @@
 }
 
 .Input-text {
-    input:active + span {
-        display: inline;  
+    input:not(:placeholder-shown) + span, input:focus + span {
+        top: 10px;
+        margin: 0;
+        left: 0;
+        font-size: 10px;
     }
 
-    input:placeholder {
-        color: transparent;
+    input {
+        height: 100%;
+        width: 100%;
+        padding: 30px 10px 10px 10px;
     }
 
     span {
         color: rgb(140, 140, 140);
-        display: none;
+        display: block;
+        position: absolute;
+        top: calc(50% - 10px);
+        margin: auto;
+        padding-left: 10px;
+        left: 0;
+        height: 20px;
+        cursor: text;
+        transition: .15s ease-out;
     }
 }
