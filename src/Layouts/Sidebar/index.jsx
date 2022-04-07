@@ -2,11 +2,11 @@ import logoSVG from "./logo.svg"
 import popularSVG from "./popular.svg"
 import accountSVG from "./account.svg"
 import React, { useState } from "react";
-import "./Navbar.scss";
+import "./Sidebar.scss";
 import { Link } from "react-router-dom";
 import Login from "./Login";
 
-const NavBar = () => {
+const Sidebar = () => {
 
     let loggedIn = false;
 
@@ -22,7 +22,7 @@ const NavBar = () => {
     }
 
     return (
-        <ul className="navbar">
+        <ul className="sidebar">
             <li className="logo">
                 <Link to="/"><img src={logoSVG} alt="Home"/></Link>
             </li>
@@ -39,4 +39,4 @@ const NavBar = () => {
     )
 } 
 
-export default NavBar;
+export default Sidebar;
