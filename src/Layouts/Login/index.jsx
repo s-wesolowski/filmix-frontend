@@ -1,7 +1,8 @@
 import "./Login.scss";
 import { useState } from 'react';
-import Modal from '../../../components/Modal'
-import Input from "../../../components/Input"
+import Modal from '../../Components/Modal'
+import Input from "../../Components/Input"
+import Button from "../../Components/Button"
 
 const Login = (props) => {
 
@@ -14,13 +15,20 @@ const Login = (props) => {
         console.log(userCredentials)
     }
 
+    const backgroundImage = "https://static.posters.cz/image/1300/plakaty/avengers-endgame-journey-s-end-i122136.jpg";
+
+    const handleSubmitLogin = () => {
+
+    }
+ 
     return props.show && 
-    <Modal close={props.close} title="Sign in">
-        <div className="login">
+    <Modal close={props.close} title="Sign in" backgroundImage={backgroundImage}>
+        <form className="login">
             <Input type="text" placeholder="E-mail address" name="email" onChange={handleInputChange}/>
             <Input type="text" placeholder="Password" name="password" onChange={handleInputChange}/>
             <Input type="checkbox" placeholder="Remember me" name="remember_me" onChange={handleInputChange}/>
-        </div>
+            <Button onClick={handleSubmitLogin} placeholder="Sign in"/>
+        </form>
     </Modal>
 }
 

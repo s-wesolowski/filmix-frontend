@@ -3,7 +3,11 @@
     border-radius: 5px;
     position: relative;
     height: 60px;
-    margin: 5px;
+    transition: .15s ease-out;
+
+    &:hover {
+        background-color: rgb(70,70,70);
+    }
 
     input {
         border: none;

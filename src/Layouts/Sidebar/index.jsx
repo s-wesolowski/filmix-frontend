@@ -4,7 +4,7 @@ import accountSVG from "./account.svg"
 import React, { useState } from "react";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
-import Login from "./Login";
+import Login from "../Login";
 
 const Sidebar = () => {
 

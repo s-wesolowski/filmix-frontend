@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Poster from "../components/Poster";
+import Poster from "../Components/Poster";
 import "./Popular.scss"
 import axios from "axios";
 
