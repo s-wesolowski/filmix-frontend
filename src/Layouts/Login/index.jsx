@@ -1,8 +1,8 @@
 import "./Login.scss";
 import { useState } from "react";
-import Modal from "../../componentss/Modal";
-import Input from "../../componentss/Input";
-import Button from "../../componentss/Button";
+import Modal from "../../Components/Modal";
+import Input from "../../Components/Input";
+import Button from "../../Components/Button";
 
 const Login = (props) => {
 
