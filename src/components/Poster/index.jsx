@@ -2,11 +2,11 @@ import "./Poster.scss"
 
 const Poster = (props) => {
 
-    const { mediaType = "movie", size = "medium", margin = "5px" } = props;
+    const { size = "medium", margin = "5px" } = props;
 
     const posterID =  props?.media?.poster_path;
 
-    const title = mediaType === "movie" ? props?.media.title : props?.media.name;
+    const title = props?.media?.media_type === "movie" ? props?.media.title : props?.media.name;
 
     const sizes = {
         small: "w92",

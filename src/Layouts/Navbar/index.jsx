@@ -1,6 +1,7 @@
 import logoSVG from "./logo.svg"
 import popularSVG from "./popular.svg"
 import accountSVG from "./account.svg"
+import searchSVG from "./search.svg";
 import React, { useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
@@ -31,6 +32,9 @@ const NavBar = () => {
             </li>
             <li className="button">
                 <Link to="/popular"><img src={popularSVG} alt="Popular" /></Link>
+            </li>
+            <li className="button">
+                <Link to="/search"><img id="search_button" src={searchSVG} alt="Search" /></Link>
             </li>
 
 

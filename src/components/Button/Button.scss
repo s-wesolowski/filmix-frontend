@@ -1,0 +1,15 @@
+.Button {
+    outline: none;
+    border: none;
+    background-color: rgb(60,60,60);
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+    margin: 5px;
+    transition: .15s ease-out;
+
+    &:hover {
+        background-color: rgb(80,80,80);
+    }
+}

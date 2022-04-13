@@ -1,9 +1,11 @@
 .Input-checkbox {
     height: 30px;
-    padding: 5px;
+    padding: 5px 0;
     display: flex;
     align-items: center;
     user-select: none;
+    background-color: transparent;
+    cursor: pointer;
 
     input {
         opacity: 0;
@@ -21,7 +23,7 @@
         height: 15px;
         margin: 2.5px;
         border-radius: 5px;
-        background-color: rgb(130, 130, 130);
+        background-color: rgb(80, 80, 80);
         transition: .1s ease-out;
     }
 
