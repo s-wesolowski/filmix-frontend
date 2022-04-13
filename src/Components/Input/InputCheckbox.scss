@@ -1,11 +1,19 @@
 .Input-checkbox {
     height: 30px;
+<<<<<<< HEAD:src/components/Input/InputCheckbox.scss
     padding: 5px 0;
     display: flex;
     align-items: center;
     user-select: none;
     background-color: transparent;
     cursor: pointer;
+=======
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    background-color: transparent;
+>>>>>>> c4d78b31ac1fa3f02588a052f99ae7cbfe5eb3e1:src/Components/Input/InputCheckbox.scss
 
     input {
         opacity: 0;
@@ -23,7 +31,11 @@
         height: 15px;
         margin: 2.5px;
         border-radius: 5px;
+<<<<<<< HEAD:src/components/Input/InputCheckbox.scss
         background-color: rgb(80, 80, 80);
+=======
+        background-color: rgb(70, 70, 70);
+>>>>>>> c4d78b31ac1fa3f02588a052f99ae7cbfe5eb3e1:src/Components/Input/InputCheckbox.scss
         transition: .1s ease-out;
     }
 

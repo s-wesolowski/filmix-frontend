@@ -1,0 +1,17 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding-bottom: 10px;
+    background-image: url("");
+
+    .Input {
+        margin-top: 20px;
+        opacity: 0.9;
+    }
+
+    .Button {
+        margin-top: 10px;
+        opacity: 0.9;
+    }
+}

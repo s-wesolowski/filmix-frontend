@@ -7,9 +7,20 @@
     width: fit-content;
     height: fit-content;
     z-index: 2;
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(50,50,50);
     border-radius: 10px;
     overflow: hidden;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        background-image: url(attr("test"));
+    }
 
     .background {
         position: fixed;
@@ -28,6 +39,9 @@
         justify-content: space-between;
         background-color: rgb(30, 30, 30);
         padding: 12.5px;
+        border-radius: 10px;
+        position: relative;
+        
 
         .title {
             line-height: 35px;
@@ -61,6 +75,6 @@
         min-width: 200px;
         min-height: 150px;
         overflow: hidden;
-        padding: 10px 20px;
+        padding: 15px;
     }
 }

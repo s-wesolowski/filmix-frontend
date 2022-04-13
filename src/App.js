@@ -1,5 +1,5 @@
 import './App.scss';
-import NavBar from "./Layouts/Navbar";
+import Sidebar from "./Layouts/Sidebar";
 import { Routes, Route } from "react-router-dom"
 import Home from "./Routes/Home"
 import Popular from './Routes/Pupular';
@@ -8,7 +8,7 @@ import Search from './Routes/Search';
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Sidebar />
       <main>
         <Routes>
           <Route path="/" element={<Home />}/>
