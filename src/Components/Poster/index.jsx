@@ -6,7 +6,7 @@ const Poster = (props) => {
 
     const posterID =  props?.media?.poster_path;
 
-    const title = props?.media?.media_type === "movie" ? props?.media.title : props?.media.name;
+    const title = props?.media.title || props?.media.name;
 
     const sizes = {
         small: "w92",

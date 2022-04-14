@@ -14,8 +14,6 @@ const Popular = () => {
         const fetchMovies = async () => {
             const tmdb_response = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey)
             const tmdb_movies = await tmdb_response.data
-
-            console.log(tmdb_response)
             
             if (tmdb_movies)
                 setMovies(tmdb_movies.results)

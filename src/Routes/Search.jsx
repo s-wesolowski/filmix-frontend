@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import Poster from "../components/Poster";
+import Poster from "../Components/Poster";
 import "./Search.scss";
 
 const Search = () => {
@@ -12,10 +12,8 @@ const Search = () => {
     const findMovies = async (title) => {
         const response = await axios.get(`https://api.themoviedb.org/3/search/multi?query=${title}&api_key=${apiKey}`);
         let results = await response.data;
-        console.log(results)
-        results = results?.results?.filter(result => result.poster_path && (result.name || result.title))
 
-        console.log(results)
+        results = results?.results?.filter(result => result.poster_path && (result.name || result.title))
 
         if (results) setResults(results)
     }
@@ -27,11 +25,11 @@ const Search = () => {
     return(
         <div className="search">
             <div className="searchInput">
-                <input type="text" onChange={handleInputChange}/>
+                <input type="text" placeholder="Search movie" onChange={handleInputChange}/>
             </div>
             <div className="results">
                 {results && results.map((result, i) => 
-                    <Poster key={i} media={result}/>
+                    <Poster key={i} media={result} margin="10px"/>
                 )}
             </div>
         </div>
