@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./Routes/Home"
 import Popular from './Routes/Pupular';
 import Search from './Routes/Search';
+import MovieDetails from './Layouts/Details/MovieDetails';
+import TvSeriesDetails from './Layouts/Details/TvSeriesDetails';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
         </Routes>
       </main>
       <div style={{clear: "both"}}></div>
+
+      <MovieDetails />
+      <TvSeriesDetails />
     </div>
   );
 }
