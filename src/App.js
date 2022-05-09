@@ -1,8 +1,10 @@
-import './App.scss';
+import "./App.scss";
 import Sidebar from "./Layouts/Sidebar";
-import { Routes, Route } from "react-router-dom"
-import Home from "./Routes/Home"
-import Popular from './Routes/Pupular';
+import { Routes, Route } from "react-router-dom";
+import Home from "./Routes/Home";
+import Popular from "./Routes/Pupular";
+import Search from "./Routes/Search";
+import MediaDetails from "./Layouts/MediaDetails/MediaDetails";
 
 function App() {
   return (
@@ -10,11 +12,14 @@ function App() {
       <Sidebar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/popular" element={<Popular />}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/popular" element={<Popular />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </main>
-      <div style={{clear: "both"}}></div>
+      <div style={{ clear: "both" }}></div>
+
+      <MediaDetails />
     </div>
   );
 }

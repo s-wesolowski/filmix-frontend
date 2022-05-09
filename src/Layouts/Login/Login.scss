@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 350px;
     padding-bottom: 10px;
-    background-image: url("");
 
     .Input {
         margin-top: 20px;
@@ -13,5 +12,11 @@
     .Button {
         margin-top: 10px;
         opacity: 0.9;
+    }
+
+    .Modal {
+        &::before {
+            background-image: url("https://static.posters.cz/image/1300/plakaty/avengers-endgame-journey-s-end-i122136.jpg");
+        }
     }
 }

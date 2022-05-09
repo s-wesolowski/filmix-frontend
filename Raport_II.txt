@@ -40,6 +40,28 @@ Archiwum aktualizacji
 + Stworzenie komponentu Modal
 + Dodanie okna logowania
 
+#Update 30.03.2022
+
++ Ostylowanie okna logowania
++ Zakładka "Search"
+
+#Update 3.04.2022
+
++ Możliwość wyszukiwania filmów i seriali
+
+#Update 7.04.2022
+
++ Optymalizacja kodu
+
+#Update 10.04
+
++ Dodanie "Movie Details"
+
+#Update 14.04
+
++ Dostosowanie "Movie Details" do urządzeń mobilnych
++ Dodanie "Tv Details"
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Problemy
 

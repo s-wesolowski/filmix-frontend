@@ -4,8 +4,9 @@ const Modal = props => {
     console.log(props);
 
     return (
-    <div className="modal">
-        <div className="background" onClick={props.close}></div>
+    <div className="Modal">
+        <div className="overlay" onClick={props.close}></div>
+        {props.backgroundImage && <div className="backgroundImage"><img src={props.backgroundImage} alt="poster_bg_img" /></div> }
         <div className="content">
             <div className="header">
                 <div className="title">{props.title || "Title"}</div>
