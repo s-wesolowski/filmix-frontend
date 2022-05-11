@@ -62,6 +62,8 @@ Archiwum aktualizacji
 + Dostosowanie "Movie Details" do urządzeń mobilnych
 + Dodanie "Tv Details"
 
+#Update 20.04
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Problemy
 
