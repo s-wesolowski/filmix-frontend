@@ -1,5 +1,12 @@
+import jwt_decode from "jwt-decode";
+
 const initialState = {
-  userData: null,
+  user:
+    localStorage.getItem("access") || sessionStorage.getItem("access")
+      ? jwt_decode(
+          localStorage.getItem("access") || sessionStorage.getItem("access")
+        )
+      : null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -7,7 +14,7 @@ const reducer = (state = initialState, action) => {
     case "SET_USERDATA": {
       return {
         ...state,
-        userData: action.data,
+        user: action.user,
       };
     }
     default:
