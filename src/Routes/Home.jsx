@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux";
+
 const Home = () => {
-    return (
-        "Strona główna w stylu kanałów z google tv."
-    )
-}
+  const userData = useSelector((state) => state.userData);
+
+  return userData.user ? "Hi " + userData.user.username + "!" : "Sing in!";
+};
 
 export default Home;

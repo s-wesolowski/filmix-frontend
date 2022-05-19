@@ -1,14 +1,14 @@
 import "./Button.scss";
 
-const Button = (props) => {
+const Button = ({ transparent, onClick, type = "button", children }) => {
   return (
     <button
       className="Button"
-      style={props.transparent && { backgroundColor: "transparent" }}
-      onClick={props.onClick}
-      type={props.type}
+      style={transparent ? { backgroundColor: "transparent" } : {}}
+      onClick={onClick}
+      type={type}
     >
-      {props.children}
+      {children}
     </button>
   );
 };

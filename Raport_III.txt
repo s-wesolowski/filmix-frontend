@@ -1,0 +1,118 @@
+Szymon Wesołowski
+
+Raport II
+
+Zrobione:
+- Stworzony klient aplikacji
+- Zakładka "popularne" wyświetlająca popularne filmy z TMDB Api
+- Okno logowania i rejestracji
+- Animacje w oknach modalnych
+- Inicjalizacja storybooka
+- Logika backendowa do rejestracji i logowania
+- Token logowania
+
+Do zrobienia:
+- Strona główna klienta
+- Rekomendacje filmów
+- Profil użytkownika (lub sama kolekcja)
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Archiwum aktualizacji
+
+#Update 22.03.2022
+
++ Intalacja wymaganych bibliotek
++ Stworzenie pierwszych plików za pomocą Create React App
++ Szkielet strony w React
++ Podział plików na foldery routes i components
+
+#Update 23.03.2022
+
++ Zakładka popularne fetchująca filmy z TMDB Api
++ Zewnętrzny komponent "Poster" zawierający odnośnik do filmu w formie plakatu
++ Dodanie styli do klienta w SCSS
+
+#Update 24.03.2022
+
++ Interakcja z plakatem (animacja wyświetlająca tytuł)
++ Stworzenie routów z React Router V6
++ Boczna nawigacja między routami
+
+#Update 28.03.2022
+
++ Aktualizacja pliku readme o zmienne środowiskowe
++ Reorganizacja struktury folderów
++ Stworzenie komponentu Modal
++ Dodanie okna logowania
+
+#Update 30.03.2022
+
++ Ostylowanie okna logowania
++ Zakładka "Search"
+
+#Update 3.04.2022
+
++ Możliwość wyszukiwania filmów i seriali
+
+#Update 7.04.2022
+
++ Optymalizacja kodu
+
+#Update 10.04
+
++ Dodanie "Movie Details"
+
+#Update 14.04
+
++ Dostosowanie "Movie Details" do urządzeń mobilnych
++ Dodanie "Tv Details"
+
+#Update 20.04
+
++ Dodanie okna rejestracji
+
+#Update 26.04
+
++ Dodanie animacji do okien modalnych
++ Animowane przejście między logowaniem i rejestracją
+
+#Update 30.04
+
++ Logika do logowania na backendzie
++ Logika JWT tokenów
+
+#Update 4.05
+
++ Logika rejestracji na backendzie
++ Podłączenie logowania i rejestacji do frontendu
+
+#Update 8.05
+
++ Dodania storybooka do projektu
+
+#Update 10.05
+
++ Dodania pierwszego elementu do storybooka
+
+#Update 12.05
+
++ Kolejna restrukturyzacja projektu (zmiana nazw i folderów)
+
+#Update 15.05
+
++ Dodania powiadomień
+
+#Update 16.05
+
++ Zmiana logiki aktualizacji stanu aplikacji
+
+#Update 18.05
+
++ Opcja "zapamiętaj mnie"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Problemy
+
+- Kompatybilność React Router V6 z innymi bibliotekami (np. z React Transition Group) x
+- Animacja między routami x

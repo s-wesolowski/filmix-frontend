@@ -6,24 +6,21 @@ import logoutSVG from "./logout.svg";
 import React, { useState } from "react";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
-import Login from "../Login";
+import Auth from "../Auth";
 import { useDispatch, useSelector } from "react-redux";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
-  let loggedIn = false;
   let { user } = useSelector((state) => state.userData);
 
-  console.log(user);
+  const [showAuth, setShowAuth] = useState(false);
 
-  const [showLogin, setShowLogin] = useState(false);
-
-  const handleClickAccount = () => {
-    if (!loggedIn) setShowLogin(true);
+  const handleOpenAuth = () => {
+    setShowAuth(true);
   };
 
-  const handleCloseLogin = () => {
-    setShowLogin(false);
+  const handleCloseAuth = () => {
+    setShowAuth(false);
   };
 
   const handleLogout = () => {
@@ -44,21 +41,11 @@ const Sidebar = () => {
           <img src={logoSVG} alt="Home" />
         </Link>
       </li>
-      <li className="button">
+      <li className="button" onClick={user ? handleLogout : handleOpenAuth}>
         {!user ? (
-          <img
-            id="account_button"
-            onClick={handleClickAccount}
-            src={accountSVG}
-            alt="account"
-          />
+          <img id="account_button" src={accountSVG} alt="account" />
         ) : (
-          <img
-            id="account_button"
-            onClick={handleLogout}
-            src={logoutSVG}
-            alt="account"
-          />
+          <img id="account_button" src={logoutSVG} alt="account" />
         )}
       </li>
       <li className="button">
@@ -72,7 +59,7 @@ const Sidebar = () => {
         </Link>
       </li>
 
-      <Login show={showLogin} close={handleCloseLogin} />
+      <Auth show={showAuth} close={handleCloseAuth} />
     </ul>
   );
 };

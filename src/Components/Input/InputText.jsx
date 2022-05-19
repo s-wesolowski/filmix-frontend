@@ -1,15 +1,19 @@
-const InputText = props => {
+const InputText = (props) => {
+  const handleChange = (e) => {
+    props.onChange(e.target.name, e.target.value);
+  };
 
-    const handleChange = e => {
-        props.onChange(e.target.name, e.target.value)
-    }
-
-    return (
+  return (
     <label className="Input Input-text">
-        <input type="text" placeholder=" " name={props.name} onChange={handleChange}></input>
-        <span>{props.placeholder}</span>
+      <input
+        placeholder=" "
+        type={props.type}
+        name={props.name}
+        onChange={props.onChange ? handleChange : null}
+      ></input>
+      <span>{props.placeholder}</span>
     </label>
-    )
-}
+  );
+};
 
 export default InputText;

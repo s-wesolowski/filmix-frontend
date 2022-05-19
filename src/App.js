@@ -5,6 +5,7 @@ import Home from "./Routes/Home";
 import Popular from "./Routes/Pupular";
 import Search from "./Routes/Search";
 import MediaDetails from "./Layouts/MediaDetails/MediaDetails";
+import Notifications from "./Layouts/Notifications";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </main>
       <div style={{ clear: "both" }}></div>
 
+      <Notifications />
       <MediaDetails />
     </div>
   );
