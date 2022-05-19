@@ -3,6 +3,7 @@ import Button from "../../Components/Button";
 import { useDispatch } from "react-redux";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
+import { toast as setNotification } from "react-toastify";
 
 const Login = (props) => {
   const dispatch = useDispatch();
@@ -18,22 +19,30 @@ const Login = (props) => {
         username,
         password,
       })
-      .then((res) => res.data);
+      .then((res) => res.data)
+      .catch((err) => {
+        console.log(err);
+        return null;
+      });
 
-    if (token && token.access)
+    if (token && token.access) {
       dispatch({
         type: "SET_USERDATA",
         user: jwtDecode(token.access),
       });
 
-    sessionStorage.setItem("access", token.access);
-    sessionStorage.setItem("refresh", token.refresh);
-    if (remember_me) {
-      localStorage.setItem("access", token.access);
-      localStorage.setItem("refresh", token.refresh);
+      sessionStorage.setItem("access", token.access);
+      sessionStorage.setItem("refresh", token.refresh);
+      if (remember_me) {
+        localStorage.setItem("access", token.access);
+        localStorage.setItem("refresh", token.refresh);
+      }
+      props.close();
+      setNotification.success("Welcome back!");
+    } else {
+      console.log("noti");
+      setNotification.error("Wrong username or password!");
     }
-
-    props.close();
   };
   return (
     <form className="auth" onSubmit={handleSubmit}>

@@ -18,16 +18,18 @@ const Register = (props) => {
         password,
         password_check,
       })
-      .then((res) => res.data);
+      .then((res) => res.data)
+      .catch((err) => {
+        console.log(err);
+        return null;
+      });
 
     if (registerResponse && registerResponse.success) {
       setNotification("Signed up successfully");
       props.showLogin();
     } else {
-      setNotification("Internal error! Try again later");
+      setNotification.error("Internal error! Try again later");
     }
-
-    props.close();
   };
 
   return (
