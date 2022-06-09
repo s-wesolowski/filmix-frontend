@@ -24,7 +24,7 @@ const Register = (props) => {
         return null;
       });
 
-    if (registerResponse && registerResponse.success) {
+    if (registerResponse && registerResponse.email) {
       setNotification("Signed up successfully");
       props.showLogin();
     } else {
@@ -36,11 +36,17 @@ const Register = (props) => {
     <form className="auth" onSubmit={handleSubmit}>
       <Input type="text" placeholder="Username" name="username" />
       <Input type="email" placeholder="E-mail address" name="email" />
-      <Input type="password" placeholder="Password" name="password" />
+      <Input
+        type="password"
+        placeholder="Password"
+        name="password"
+        minLength="8"
+      />
       <Input
         type="password"
         placeholder="Repeat password"
         name="password_check"
+        minLength="8"
       />
       <Button type="submit">Sign up</Button>
       <Button type="button" onClick={props.showLogin} transparent>

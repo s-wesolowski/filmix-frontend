@@ -12,22 +12,28 @@ const Home = () => {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const lastMovieFromCollection =
-        collection[user] &&
-        collection[user.user_id] &&
-        collection[user.user_id]
-          .reverse()
-          .filter((item) => item.type === "movie");
+      const lastMovieFromCollection = (
+        (user.user_id &&
+          collection[user.user_id] &&
+          collection[user.user_id]) ||
+        []
+      )
+        .reverse()
+        .filter((item) => item.type === "movie");
 
-      const tmdb_response =
-        ((collection[user] && collection[user.user_id]) || []).length === 0
-          ? await axios.get(
-              "https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey
-            )
-          : await axios.get(
-              `https://api.themoviedb.org/3/movie/${lastMovieFromCollection[0].data.id}/recommendations?api_key=` +
-                apiKey
-            );
+      let tmdb_response = {};
+
+      if (user.user_id && lastMovieFromCollection.length > 0) {
+        tmdb_response = await axios.get(
+          `https://api.themoviedb.org/3/movie/${lastMovieFromCollection[0].data.id}/recommendations?api_key=` +
+            apiKey
+        );
+      } else {
+        tmdb_response = await axios.get(
+          "https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey
+        );
+      }
+
       const tmdb_movies = await tmdb_response.data;
 
       if (tmdb_movies) setMovies(tmdb_movies.results);

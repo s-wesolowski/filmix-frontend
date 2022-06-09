@@ -10,6 +10,7 @@ const InputText = (props) => {
         type={props.type}
         name={props.name}
         onChange={props.onChange ? handleChange : null}
+        minLength={props.minLength || 0}
       ></input>
       <span>{props.placeholder}</span>
     </label>
