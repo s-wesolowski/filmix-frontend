@@ -1,6 +1,6 @@
 Szymon Wesołowski
 
-Raport II
+Raport III
 
 Zrobione:
 - Stworzony klient aplikacji
@@ -10,8 +10,6 @@ Zrobione:
 - Inicjalizacja storybooka
 - Logika backendowa do rejestracji i logowania
 - Token logowania
-
-Do zrobienia:
 - Strona główna klienta
 - Rekomendacje filmów
 - Profil użytkownika (lub sama kolekcja)
@@ -111,7 +109,34 @@ Archiwum aktualizacji
 
 + Opcja "zapamiętaj mnie"
 
+#Update 22.05
+
++ Dodano kolecje filmów i seriali
++ Dodano wyświetlanie sezonów seriali
+
+#Update 24.05
+
++ Możliwość dodawania filmów i seriali do kolekcji
+
+#Update 27.05
+
++ Zapisywanie kolekcji
+
+#Update 30.05
+
++ Dodanie styli
+
+#Update 5.06
+
++ Poprawa czytelności kody i naprawa kilku małych błędów
+
+#Update 8.06
+
++ Uzależnienie kolekcji od logowania
++ Dodanie rekomendowanych filmów
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Problemy
 
 - Kompatybilność React Router V6 z innymi bibliotekami (np. z React Transition Group) x

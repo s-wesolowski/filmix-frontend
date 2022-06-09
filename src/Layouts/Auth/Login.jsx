@@ -37,6 +37,22 @@ const Login = (props) => {
         localStorage.setItem("access", token.access);
         localStorage.setItem("refresh", token.refresh);
       }
+
+      let collection = localStorage.getItem("collection") || [];
+
+      const user = jwtDecode(token.access);
+      console.log(user);
+
+      collection = JSON.parse(collection);
+
+      if (collection[user.user_id]) {
+        dispatch({
+          userId: user.user_id,
+          type: "COLLECTION_SET",
+          items: collection[user.user_id],
+        });
+      }
+
       props.close();
       setNotification.success("Welcome back!");
     } else {

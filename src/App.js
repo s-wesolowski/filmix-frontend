@@ -6,6 +6,7 @@ import Popular from "./Routes/Pupular";
 import Search from "./Routes/Search";
 import MediaDetails from "./Layouts/MediaDetails/MediaDetails";
 import Notifications from "./Layouts/Notifications";
+import Collection from "./Routes/Collection";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/collection" element={<Collection />} />
         </Routes>
       </main>
       <div style={{ clear: "both" }}></div>

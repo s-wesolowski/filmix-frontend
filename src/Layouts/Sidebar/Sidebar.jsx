@@ -3,6 +3,7 @@ import popularSVG from "./popular.svg";
 import accountSVG from "./account.svg";
 import searchSVG from "./search.svg";
 import logoutSVG from "./logout.svg";
+import collectionSVG from "./collection.svg";
 import React, { useState } from "react";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
@@ -48,6 +49,13 @@ const Sidebar = () => {
           <img id="account_button" src={logoutSVG} alt="account" />
         )}
       </li>
+      {user && (
+        <li className="button">
+          <Link to="/collection">
+            <img src={collectionSVG} alt="Collection" />
+          </Link>
+        </li>
+      )}
       <li className="button">
         <Link to="/popular">
           <img src={popularSVG} alt="Popular" />

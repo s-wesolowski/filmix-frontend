@@ -1,55 +1,61 @@
 const initialState = {
-  movieCollection: null,
-  tvSeriesCollection: null,
+  collection: localStorage.getItem("collection")
+    ? JSON.parse(localStorage.getItem("collection"))
+    : {},
 };
 
 const reducer = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
-    case "MOVIECOLLECTION_SET": {
+    case "COLLECTION_SET": {
       return {
         ...state,
-        movieCollection: action.data,
+        collection: {
+          ...state.collection,
+          [action.userId]: action.items,
+        },
       };
     }
-    case "MOVIECOLLECTION_ADD": {
-      const newMovieCollection = state.movieCollection;
-      newMovieCollection.push(action.movieID);
-      return {
-        ...state,
-        movieCollection: newMovieCollection,
-      };
-    }
-    case "MOVIECOLLECTION_REMOVE": {
-      const newMovieCollection = state.movieCollection.filter(
-        (movie) => movie !== action.movieID
+    case "COLLECTION_ADD": {
+      localStorage.setItem(
+        "collection",
+        JSON.stringify({
+          ...state.collection,
+          [action.userId]: [
+            ...(state.collection[action.userId] || []),
+            action.item,
+          ],
+        })
       );
       return {
         ...state,
-        movieCollection: newMovieCollection,
+        collection: {
+          ...state.collection,
+          [action.userId]: [
+            ...(state.collection[action.userId] || []),
+            action.item,
+          ],
+        },
       };
     }
-
-    case "TVSERIESCOLLECTION_SET": {
-      return {
-        ...state,
-        tvSeriesCollection: action.data,
-      };
-    }
-    case "TVSERIESCOLLECTION_ADD": {
-      const newTvSeriesCollection = state.tvSeriesCollection;
-      newTvSeriesCollection.push(action.tvSeriesID);
-      return {
-        ...state,
-        tvSeriesCollection: newTvSeriesCollection,
-      };
-    }
-    case "TVSERIESCOLLECTION_REMOVE": {
-      const newTvSeriesCollection = state.tvSeriesCollection.filter(
-        (tvSeries) => tvSeries !== action.tvSeriesID
+    case "COLLECTION_REMOVE": {
+      localStorage.setItem(
+        "collection",
+        JSON.stringify({
+          ...state.collection,
+          [action.userId]: (state.collection[action.userId] || []).filter(
+            (item) => item.data.id !== action.item.data.id
+          ),
+        })
       );
       return {
         ...state,
-        tvSeriesCollection: newTvSeriesCollection,
+        collection: {
+          ...state.collection,
+          [action.userId]: (state.collection[action.userId] || []).filter(
+            (item) => item.data.id !== action.item.data.id
+          ),
+        },
       };
     }
     default:
