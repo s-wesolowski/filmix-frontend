@@ -13,7 +13,8 @@ const Home = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       const lastMovieFromCollection = (
-        (user.user_id &&
+        (user &&
+          user.user_id &&
           collection[user.user_id] &&
           collection[user.user_id]) ||
         []
@@ -23,7 +24,7 @@ const Home = () => {
 
       let tmdb_response = {};
 
-      if (user.user_id && lastMovieFromCollection.length > 0) {
+      if (user && user.user_id && lastMovieFromCollection.length > 0) {
         tmdb_response = await axios.get(
           `https://api.themoviedb.org/3/movie/${lastMovieFromCollection[0].data.id}/recommendations?api_key=` +
             apiKey

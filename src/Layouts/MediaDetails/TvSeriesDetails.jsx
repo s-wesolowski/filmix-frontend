@@ -46,7 +46,7 @@ const TvSeriesDetails = (props) => {
       )
       .then(async (res) => {
         setSelectedSeason(res.data);
-        if (seasonIndicator === 0) {
+        if (seasonIndicator === 0 && props.data.seasons.length === 1) {
           setSeasonIndicator(season_number - 1);
         } else {
           setSeasonIndicator(season_number);
@@ -244,11 +244,7 @@ const TvSeriesDetails = (props) => {
                       <div className="overview">{episode.overview}</div>
                     </div>
 
-                    <div className="buttons">
-                      <button className="watched">
-                        <span className="material-icon">done</span>
-                      </button>
-                    </div>
+                    <div className="buttons"></div>
                   </div>
                 ))}
             </div>

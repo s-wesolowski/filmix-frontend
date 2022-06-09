@@ -124,7 +124,8 @@ Archiwum aktualizacji
 
 #Update 30.05
 
-+ Dodanie styli
++ Dodanie styli css
++ Dodanie loadera do szczegółów filmów i seriali
 
 #Update 5.06
 
