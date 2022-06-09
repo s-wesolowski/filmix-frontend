@@ -41,7 +41,8 @@ const Home = () => {
     };
 
     fetchMovies();
-  }, [apiKey, collection, user]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [apiKey, user]);
 
   return (
     <>
