@@ -41,7 +41,7 @@ const Home = () => {
     };
 
     fetchMovies();
-  }, [apiKey]);
+  }, [apiKey, collection, user]);
 
   return (
     <>
