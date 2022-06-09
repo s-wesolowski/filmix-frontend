@@ -11,6 +11,10 @@ const Register = (props) => {
     const password = e.target[2].value;
     const password_check = e.target[3].value;
 
+    if (password_check !== password) {
+      return setNotification.error("Passwords do not match.");
+    }
+
     const registerResponse = await axios
       .post("http://localhost:8000/api/register/", {
         email,
